@@ -1,4 +1,5 @@
 
+import Borde.RoundedBorder;
 import static Conexion.Conexion.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,6 +27,12 @@ public class ventanaLogin extends javax.swing.JFrame {
         initComponents();
         conectar();
         pnlIniciar.setVisible(false);
+        txtNombre.setBorder(new RoundedBorder(20));
+        txtPass.setBorder(new RoundedBorder(20));
+        txtPassI.setBorder(new RoundedBorder(20));
+        txtTel.setBorder(new RoundedBorder(20));
+        txtUsuario.setBorder(new RoundedBorder(20));
+        txtUsuarioI.setBorder(new RoundedBorder(20));
     }
 
     /**
@@ -37,85 +44,66 @@ public class ventanaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlIniciar = new LIB.JPanelRound();
-        txtUsuarioI = new LIB.FSTexFieldMD();
-        txtPassI = new LIB.FSPasswordFieldMD();
-        chxTer1 = new javax.swing.JCheckBox();
+        pnlIniciar = new javax.swing.JPanel();
+        chxTerI = new javax.swing.JCheckBox();
         lblReg = new javax.swing.JLabel();
         jPanelRound3 = new LIB.JPanelRound();
         lblIniciarS = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jPanelRound1 = new LIB.JPanelRound();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        txtUsuarioI = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        pnlReg = new LIB.JPanelTransparente();
-        txtNombre = new LIB.FSTexFieldMD();
-        txtUsuario = new LIB.FSTexFieldMD();
-        txtPass = new LIB.FSPasswordFieldMD();
-        txtTel = new LIB.FSTexFieldMD();
+        txtPassI = new javax.swing.JPasswordField();
+        pnlReg = new javax.swing.JPanel();
         chxTer = new javax.swing.JCheckBox();
         lblIniciar = new javax.swing.JLabel();
-        jPanelRound2 = new LIB.JPanelRound();
+        jPanelRound4 = new LIB.JPanelRound();
         lblRegistro = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jPanelRound5 = new LIB.JPanelRound();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txtPass = new javax.swing.JPasswordField();
+        txtNombre = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        txtTel = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlIniciar.setColorPrimario(new java.awt.Color(0, 0, 0));
-        pnlIniciar.setColorSecundario(new java.awt.Color(23, 93, 96));
+        pnlIniciar.setPreferredSize(new java.awt.Dimension(1000, 600));
         pnlIniciar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtUsuarioI.setForeground(new java.awt.Color(255, 255, 255));
-        txtUsuarioI.setBordeColorFocus(new java.awt.Color(210, 192, 48));
-        txtUsuarioI.setColorTransparente(true);
-        txtUsuarioI.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
-        txtUsuarioI.setPlaceholder("Usuario");
-        pnlIniciar.add(txtUsuarioI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 310, -1));
-
-        txtPassI.setBackground(new java.awt.Color(204, 204, 204));
-        txtPassI.setForeground(new java.awt.Color(51, 51, 51));
-        txtPassI.setBordeColorFocus(new java.awt.Color(210, 192, 48));
-        txtPassI.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
-        txtPassI.setOpaque(false);
-        txtPassI.setPlaceholder("Contraseña");
-        pnlIniciar.add(txtPassI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, -1));
-
-        chxTer1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        chxTer1.setForeground(new java.awt.Color(255, 255, 255));
-        chxTer1.setText("Mantener sesión iniciada");
-        chxTer1.setOpaque(false);
-        pnlIniciar.add(chxTer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 250, -1));
+        chxTerI.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        chxTerI.setText("Mantener sesión iniciada");
+        pnlIniciar.add(chxTerI, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 250, -1));
 
         lblReg.setBackground(new java.awt.Color(255, 255, 255));
-        lblReg.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        lblReg.setForeground(new java.awt.Color(255, 255, 255));
+        lblReg.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         lblReg.setText("No tienes una cuenta? Registrate");
-        lblReg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblReg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblReg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblRegMouseClicked(evt);
             }
         });
-        pnlIniciar.add(lblReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, -1, -1));
+        pnlIniciar.add(lblReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 200, 30));
 
-        jPanelRound3.setBackground(new java.awt.Color(194, 178, 44));
+        jPanelRound3.setBackground(new java.awt.Color(234, 69, 76));
         jPanelRound3.setToolTipText("");
         jPanelRound3.setOpaque(true);
 
-        lblIniciarS.setFont(new java.awt.Font("Segoe UI Semibold", 1, 21)); // NOI18N
+        lblIniciarS.setFont(new java.awt.Font("Calibri", 1, 21)); // NOI18N
         lblIniciarS.setForeground(new java.awt.Color(255, 255, 255));
         lblIniciarS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblIniciarS.setText("Iniciar Sesión");
-        lblIniciarS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblIniciarS.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblIniciarS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblIniciarSMouseClicked(evt);
@@ -138,159 +126,170 @@ public class ventanaLogin extends javax.swing.JFrame {
                 .addComponent(lblIniciarS, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnlIniciar.add(jPanelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 160, -1));
+        pnlIniciar.add(jPanelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 160, -1));
 
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c392ba101244345 1.png"))); // NOI18N
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_facebook_42px_1.png"))); // NOI18N
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 16, -1, -1));
+        javax.swing.GroupLayout jPanelRound1Layout = new javax.swing.GroupLayout(jPanelRound1);
+        jPanelRound1.setLayout(jPanelRound1Layout);
+        jPanelRound1Layout.setHorizontalGroup(
+            jPanelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanelRound1Layout.setVerticalGroup(
+            jPanelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_twitter_42px_2.png"))); // NOI18N
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 16, -1, -1));
+        pnlIniciar.add(jPanelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 530, 600));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_google_42px.png"))); // NOI18N
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 16, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabel2.setText("Bienvenido de nuevo");
+        pnlIniciar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
-        pnlIniciar.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 518, 420, 80));
+        txtUsuarioI.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        pnlIniciar.add(txtUsuarioI, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 310, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pngegg (17) 1.png"))); // NOI18N
-        pnlIniciar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 300, 490));
+        jLabel3.setFont(new java.awt.Font("Calibri", 0, 15)); // NOI18N
+        jLabel3.setText("Bienvenido de nuevo! Porfavor ingrese sus datos");
+        pnlIniciar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 310, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 1.png"))); // NOI18N
-        pnlIniciar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, -50, 180, 600));
+        jLabel7.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel7.setText("Contraseña");
+        pnlIniciar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 2.png"))); // NOI18N
-        pnlIniciar.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 600));
+        jLabel8.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel8.setText("Usuario");
+        pnlIniciar.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
-        pnlReg.setColorPrimario(new java.awt.Color(0, 0, 0));
-        pnlReg.setColorSecundario(new java.awt.Color(23, 93, 96));
+        txtPassI.setText("jPasswordField1");
+        pnlIniciar.add(txtPassI, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 310, 40));
+
         pnlReg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
-        txtNombre.setBordeColorFocus(new java.awt.Color(248, 179, 13));
-        txtNombre.setColorTransparente(true);
-        txtNombre.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
-        txtNombre.setOpaque(false);
-        txtNombre.setPlaceholder("Nombre");
-        pnlReg.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 310, -1));
-
-        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        txtUsuario.setBordeColorFocus(new java.awt.Color(248, 179, 13));
-        txtUsuario.setColorTransparente(true);
-        txtUsuario.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
-        txtUsuario.setPlaceholder("Usuario");
-        pnlReg.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 310, -1));
-
-        txtPass.setBackground(new java.awt.Color(204, 204, 204));
-        txtPass.setForeground(new java.awt.Color(51, 51, 51));
-        txtPass.setText("fSPasswordFieldMD2");
-        txtPass.setBordeColorFocus(new java.awt.Color(248, 179, 13));
-        txtPass.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
-        txtPass.setOpaque(false);
-        txtPass.setPlaceholder("Contraseña");
-        pnlReg.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 310, -1));
-
-        txtTel.setForeground(new java.awt.Color(255, 255, 255));
-        txtTel.setBordeColorFocus(new java.awt.Color(248, 179, 13));
-        txtTel.setColorTransparente(true);
-        txtTel.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
-        txtTel.setPlaceholder("Telefono");
-        txtTel.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtTelKeyPressed(evt);
-            }
-        });
-        pnlReg.add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 310, -1));
-
-        chxTer.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        chxTer.setForeground(new java.awt.Color(255, 255, 255));
+        chxTer.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         chxTer.setText("Aceptar Terminos y Condiciones");
-        chxTer.setOpaque(false);
-        pnlReg.add(chxTer, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 250, -1));
+        pnlReg.add(chxTer, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 250, -1));
 
-        lblIniciar.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        lblIniciar.setForeground(new java.awt.Color(255, 255, 255));
+        lblIniciar.setBackground(new java.awt.Color(255, 255, 255));
+        lblIniciar.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         lblIniciar.setText("Tienes una cuenta? Inicia Sesión");
-        lblIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblIniciar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblIniciarMouseClicked(evt);
             }
         });
-        pnlReg.add(lblIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 420, -1, -1));
+        pnlReg.add(lblIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 530, 200, 30));
 
-        jPanelRound2.setBackground(new java.awt.Color(248, 179, 13));
-        jPanelRound2.setToolTipText("");
-        jPanelRound2.setOpaque(true);
+        jPanelRound4.setBackground(new java.awt.Color(234, 69, 76));
+        jPanelRound4.setToolTipText("");
+        jPanelRound4.setOpaque(true);
 
-        lblRegistro.setFont(new java.awt.Font("Segoe UI Semibold", 1, 21)); // NOI18N
+        lblRegistro.setFont(new java.awt.Font("Calibri", 1, 21)); // NOI18N
         lblRegistro.setForeground(new java.awt.Color(255, 255, 255));
         lblRegistro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRegistro.setText("Registrarse");
-        lblRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblRegistro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblRegistroMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanelRound2Layout = new javax.swing.GroupLayout(jPanelRound2);
-        jPanelRound2.setLayout(jPanelRound2Layout);
-        jPanelRound2Layout.setHorizontalGroup(
-            jPanelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRound2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+        javax.swing.GroupLayout jPanelRound4Layout = new javax.swing.GroupLayout(jPanelRound4);
+        jPanelRound4.setLayout(jPanelRound4Layout);
+        jPanelRound4Layout.setHorizontalGroup(
+            jPanelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRound4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        jPanelRound2Layout.setVerticalGroup(
-            jPanelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRound2Layout.createSequentialGroup()
+        jPanelRound4Layout.setVerticalGroup(
+            jPanelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRound4Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(lblRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnlReg.add(jPanelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        pnlReg.add(jPanelRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 160, -1));
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c392ba101244345 1.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_facebook_42px_1.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+        javax.swing.GroupLayout jPanelRound5Layout = new javax.swing.GroupLayout(jPanelRound5);
+        jPanelRound5.setLayout(jPanelRound5Layout);
+        jPanelRound5Layout.setHorizontalGroup(
+            jPanelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanelRound5Layout.setVerticalGroup(
+            jPanelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_twitter_42px_2.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        pnlReg.add(jPanelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 530, 600));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_google_42px.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+        jLabel11.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabel11.setText("Bienvenido");
+        pnlReg.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        pnlReg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 420, 80));
+        txtUsuario.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        pnlReg.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 310, 40));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PngItem_14348 1.png"))); // NOI18N
-        pnlReg.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, -10, 450, 610));
+        jLabel12.setFont(new java.awt.Font("Calibri", 0, 15)); // NOI18N
+        jLabel12.setText("Bienvenido! Porfavor ingrese sus datos");
+        pnlReg.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 310, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 10.png"))); // NOI18N
-        pnlReg.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, -50, 180, 600));
+        jLabel15.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel15.setText("Telefono");
+        pnlReg.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 2.png"))); // NOI18N
-        pnlReg.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 600));
+        jLabel16.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel16.setText("Nombre");
+        pnlReg.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
+        txtPass.setText("jPasswordField1");
+        pnlReg.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 310, 40));
+
+        txtNombre.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        pnlReg.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 310, 40));
+
+        jLabel17.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel17.setText("Usuario");
+        pnlReg.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+
+        txtTel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        pnlReg.add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 310, 40));
+
+        jLabel18.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel18.setText("Contraseña");
+        pnlReg.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 1000, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 2, Short.MAX_VALUE)
-                    .addComponent(pnlReg, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 3, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlReg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(pnlIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(pnlIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -300,26 +299,6 @@ public class ventanaLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void lblRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistroMouseClicked
-        try {
-            st = cnn.createStatement();
-            String R[] = new String[4];
-            R[0] = txtNombre.getText();
-            R[1] = txtPass.getText();
-            R[2] = txtPass.getText();
-            R[3] = txtTel.getText();
-            String sql = "INSERT INTO cliente (Nombre,Usuario,Contraseña,Telefono)VALUES ('" + R[0] + "','" + R[1] + "','" + R[2] + "','" + R[3] + "')"; //Consulta sql
-            System.out.print(sql);
-            st.executeUpdate(sql);
-        } catch (SQLException ex) {
-            Logger.getLogger(ventanaLogin.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_lblRegistroMouseClicked
-
-    private void txtTelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelKeyPressed
-        
-    }//GEN-LAST:event_txtTelKeyPressed
 
     private void lblIniciarSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSMouseClicked
         try {
@@ -349,15 +328,31 @@ public class ventanaLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblIniciarSMouseClicked
 
+    private void lblRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegMouseClicked
+        pnlReg.setVisible(true);
+        pnlIniciar.setVisible(false);
+    }//GEN-LAST:event_lblRegMouseClicked
+
     private void lblIniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarMouseClicked
         pnlReg.setVisible(false);
         pnlIniciar.setVisible(true);
     }//GEN-LAST:event_lblIniciarMouseClicked
 
-    private void lblRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegMouseClicked
-        pnlReg.setVisible(true);
-        pnlIniciar.setVisible(false);
-    }//GEN-LAST:event_lblRegMouseClicked
+    private void lblRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistroMouseClicked
+        try {
+            st = cnn.createStatement();
+            String R[] = new String[4];
+            R[0] = txtNombre.getText();
+            R[1] = txtPass.getText();
+            R[2] = txtPass.getText();
+            R[3] = txtTel.getText();
+            String sql = "INSERT INTO cliente (Nombre,Usuario,Contraseña,Telefono)VALUES ('" + R[0] + "','" + R[1] + "','" + R[2] + "','" + R[3] + "')"; //Consulta sql
+            System.out.print(sql);
+            st.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(ventanaLogin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_lblRegistroMouseClicked
 
     public void cargarDatos() {
         String datos[] = new String[4];    //Variable que almacena los datos de la consulta
@@ -412,34 +407,34 @@ public class ventanaLogin extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox chxTer;
-    private javax.swing.JCheckBox chxTer1;
+    private javax.swing.JCheckBox chxTerI;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private LIB.JPanelRound jPanelRound2;
+    private LIB.JPanelRound jPanelRound1;
     private LIB.JPanelRound jPanelRound3;
+    private LIB.JPanelRound jPanelRound4;
+    private LIB.JPanelRound jPanelRound5;
     private javax.swing.JLabel lblIniciar;
     private javax.swing.JLabel lblIniciarS;
     private javax.swing.JLabel lblReg;
     private javax.swing.JLabel lblRegistro;
-    private LIB.JPanelRound pnlIniciar;
-    private LIB.JPanelTransparente pnlReg;
-    private LIB.FSTexFieldMD txtNombre;
-    private LIB.FSPasswordFieldMD txtPass;
-    private LIB.FSPasswordFieldMD txtPassI;
-    private LIB.FSTexFieldMD txtTel;
-    private LIB.FSTexFieldMD txtUsuario;
-    private LIB.FSTexFieldMD txtUsuarioI;
+    private javax.swing.JPanel pnlIniciar;
+    private javax.swing.JPanel pnlReg;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JPasswordField txtPassI;
+    private javax.swing.JTextField txtTel;
+    private javax.swing.JTextField txtUsuario;
+    private javax.swing.JTextField txtUsuarioI;
     // End of variables declaration//GEN-END:variables
 }
